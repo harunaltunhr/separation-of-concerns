@@ -12,26 +12,26 @@
     }
   </style>
 
-  <script id='handlers'>
-    'use strict';
+<script id='handlers'>
+  'use strict';
 
-    const toggleColorHandler = (event) => {
-      debugger;
+  const toggleColorHandler = (event) => {
+    debugger;
 
-      const target = _;
-      if (target.nodeName !== '_') {
-        return;
-      }
+    const target = event.target;
+    if (target.nodeName !== 'BUTTON') {
+      return;
+    }
 
-      if (event.type === '_') {
-        target.style.backgroundColor = 'black';
-        target.style.color = 'white';
-      }
-      else if (event.type === '_') {
-        target.style.backgroundColor = 'white';
-        target.style.color = 'black';
-      }
-    };
+    if (event.type === 'focusin') {
+      target.style.backgroundColor = 'black';
+      target.style.color = 'white';
+    }
+    else if (event.type === 'focusout') {
+      target.style.backgroundColor = 'white';
+      target.style.color = 'black';
+    }
+  };
   </script>
 </head>
 
