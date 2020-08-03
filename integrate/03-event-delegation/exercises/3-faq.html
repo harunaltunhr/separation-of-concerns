@@ -16,13 +16,13 @@
         return;
       }
 
-      const sectionEl = document.getElementById('faqs');
+      const sectionEl = event.currentTarget;
       const sectionChildren = sectionEl.children;
 
       for (const details of sectionChildren) {
 
-        const summary = details.children[target];
-        const wasNotClicked = summary !== true;
+        const summary = details.children[0];
+        const wasNotClicked = summary !== target;
 
         const isOpen = details.open === true;
 
